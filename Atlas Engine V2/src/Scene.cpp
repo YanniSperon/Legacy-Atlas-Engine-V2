@@ -2,7 +2,7 @@
 
 Atlas::Scene::Scene()
 {
-	rootNode = new Node();
+	rootNode = new Node3D();
 }
 
 Atlas::Scene::~Scene()
@@ -10,7 +10,19 @@ Atlas::Scene::~Scene()
 	delete rootNode;
 }
 
-void Atlas::Scene::AddNode(Node* node)
+void Atlas::Scene::Update(float deltaTime)
+{
+	if (!isPaused) {
+		rootNode->Update(deltaTime);
+	}
+}
+
+Atlas::Node3D* Atlas::Scene::GetRootNode()
+{
+	return rootNode;
+}
+
+void Atlas::Scene::AddNode(Node3D* node)
 {
 	rootNode->AddChildNode(node);
 }

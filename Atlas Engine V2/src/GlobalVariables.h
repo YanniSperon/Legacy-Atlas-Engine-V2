@@ -4,6 +4,8 @@
 #include <string>
 #include <chrono>
 
+#include "Scene.h"
+
 namespace Atlas {
 	class GlobalVariables {
 	private:
@@ -13,5 +15,9 @@ namespace Atlas {
 
 		std::vector<std::string> consoleLog;
 		std::chrono::steady_clock::time_point systemStartTime;
+		int screenWidth;
+		int screenHeight;
+
+		Scene* currentScene;
 	};
 }

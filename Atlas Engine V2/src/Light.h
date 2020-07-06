@@ -7,5 +7,7 @@ namespace Atlas {
 	public:
 		Light();
 		~Light();
+
+		void Update(float deltaTime);
 	};
 }

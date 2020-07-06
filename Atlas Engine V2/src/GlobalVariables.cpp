@@ -6,4 +6,8 @@ Atlas::GlobalVariables::GlobalVariables()
 
 	consoleLog = std::vector<std::string>();
 	systemStartTime = std::chrono::high_resolution_clock::now();
+	screenWidth = 1920;
+	screenHeight = 1080;
+
+	currentScene = NULL;
 }
